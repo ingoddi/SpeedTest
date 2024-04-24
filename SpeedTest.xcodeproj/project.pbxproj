@@ -8,14 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		1184A9302BD92A4A000CCB5B /* SpeedTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1184A92F2BD92A4A000CCB5B /* SpeedTestApp.swift */; };
-		1184A9322BD92A4A000CCB5B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1184A9312BD92A4A000CCB5B /* ContentView.swift */; };
 		1184A9342BD92A4C000CCB5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1184A9332BD92A4C000CCB5B /* Assets.xcassets */; };
 		1184A9372BD92A4C000CCB5B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1184A9362BD92A4C000CCB5B /* Preview Assets.xcassets */; };
-		1184A9392BD92A4C000CCB5B /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1184A9382BD92A4C000CCB5B /* Persistence.swift */; };
 		1184A93C2BD92A4C000CCB5B /* SpeedTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1184A93A2BD92A4C000CCB5B /* SpeedTest.xcdatamodeld */; };
 		1184A9462BD92A4C000CCB5B /* SpeedTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1184A9452BD92A4C000CCB5B /* SpeedTestTests.swift */; };
 		1184A9502BD92A4C000CCB5B /* SpeedTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1184A94F2BD92A4C000CCB5B /* SpeedTestUITests.swift */; };
 		1184A9522BD92A4C000CCB5B /* SpeedTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1184A9512BD92A4C000CCB5B /* SpeedTestUITestsLaunchTests.swift */; };
+		1184A9632BD92AD3000CCB5B /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1184A9622BD92AD3000CCB5B /* DataController.swift */; };
+		1184A9662BD92B4E000CCB5B /* LogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1184A9652BD92B4E000CCB5B /* LogService.swift */; };
+		1184A96A2BD92B6D000CCB5B /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1184A9692BD92B6D000CCB5B /* Date+.swift */; };
+		1184A9712BD9313E000CCB5B /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1184A9702BD9313E000CCB5B /* MainScreenView.swift */; };
+		1184A9732BD9314F000CCB5B /* MainScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1184A9722BD9314F000CCB5B /* MainScreenViewModel.swift */; };
+		1184A9752BD931B6000CCB5B /* SettingsScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1184A9742BD931B6000CCB5B /* SettingsScreenView.swift */; };
+		1184A9772BD931C7000CCB5B /* SettingsScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1184A9762BD931C7000CCB5B /* SettingsScreenViewModel.swift */; };
+		1184A9792BD931D9000CCB5B /* HistoryScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1184A9782BD931D9000CCB5B /* HistoryScreenViewModel.swift */; };
+		1184A97B2BD931E3000CCB5B /* HistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1184A97A2BD931E3000CCB5B /* HistoryModel.swift */; };
+		1184A97D2BD931FC000CCB5B /* HistoryScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1184A97C2BD931FC000CCB5B /* HistoryScreenView.swift */; };
+		1184A97F2BD9328C000CCB5B /* NetworkSpeedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1184A97E2BD9328C000CCB5B /* NetworkSpeedService.swift */; };
+		1184A9812BD932D4000CCB5B /* MainScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1184A9802BD932D4000CCB5B /* MainScreenAssembly.swift */; };
+		1184A9832BD932DE000CCB5B /* MainScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1184A9822BD932DE000CCB5B /* MainScreenRouter.swift */; };
+		1184A9852BD93367000CCB5B /* SettingsScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1184A9842BD93367000CCB5B /* SettingsScreenRouter.swift */; };
+		1184A9872BD93373000CCB5B /* SettingsScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1184A9862BD93373000CCB5B /* SettingsScreenAssembly.swift */; };
+		1184A9892BD93563000CCB5B /* HistoryScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1184A9882BD93563000CCB5B /* HistoryScreenRouter.swift */; };
+		1184A98B2BD93576000CCB5B /* HistoryScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1184A98A2BD93576000CCB5B /* HistoryScreenAssembly.swift */; };
+		1184A9912BD96E8E000CCB5B /* SharedDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1184A9902BD96E8E000CCB5B /* SharedDataService.swift */; };
+		1184A9932BD96EAF000CCB5B /* DIContainerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1184A9922BD96EAF000CCB5B /* DIContainerImpl.swift */; };
+		1184A9962BD96FE7000CCB5B /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1184A9952BD96FE7000CCB5B /* DIContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,16 +56,34 @@
 /* Begin PBXFileReference section */
 		1184A92C2BD92A4A000CCB5B /* SpeedTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeedTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1184A92F2BD92A4A000CCB5B /* SpeedTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedTestApp.swift; sourceTree = "<group>"; };
-		1184A9312BD92A4A000CCB5B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1184A9332BD92A4C000CCB5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1184A9362BD92A4C000CCB5B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		1184A9382BD92A4C000CCB5B /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		1184A93B2BD92A4C000CCB5B /* SpeedTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SpeedTest.xcdatamodel; sourceTree = "<group>"; };
 		1184A9412BD92A4C000CCB5B /* SpeedTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpeedTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1184A9452BD92A4C000CCB5B /* SpeedTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedTestTests.swift; sourceTree = "<group>"; };
 		1184A94B2BD92A4C000CCB5B /* SpeedTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpeedTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1184A94F2BD92A4C000CCB5B /* SpeedTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedTestUITests.swift; sourceTree = "<group>"; };
 		1184A9512BD92A4C000CCB5B /* SpeedTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1184A9622BD92AD3000CCB5B /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		1184A9652BD92B4E000CCB5B /* LogService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogService.swift; sourceTree = "<group>"; };
+		1184A9692BD92B6D000CCB5B /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
+		1184A9702BD9313E000CCB5B /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
+		1184A9722BD9314F000CCB5B /* MainScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewModel.swift; sourceTree = "<group>"; };
+		1184A9742BD931B6000CCB5B /* SettingsScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenView.swift; sourceTree = "<group>"; };
+		1184A9762BD931C7000CCB5B /* SettingsScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenViewModel.swift; sourceTree = "<group>"; };
+		1184A9782BD931D9000CCB5B /* HistoryScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryScreenViewModel.swift; sourceTree = "<group>"; };
+		1184A97A2BD931E3000CCB5B /* HistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryModel.swift; sourceTree = "<group>"; };
+		1184A97C2BD931FC000CCB5B /* HistoryScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryScreenView.swift; sourceTree = "<group>"; };
+		1184A97E2BD9328C000CCB5B /* NetworkSpeedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSpeedService.swift; sourceTree = "<group>"; };
+		1184A9802BD932D4000CCB5B /* MainScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenAssembly.swift; sourceTree = "<group>"; };
+		1184A9822BD932DE000CCB5B /* MainScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenRouter.swift; sourceTree = "<group>"; };
+		1184A9842BD93367000CCB5B /* SettingsScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenRouter.swift; sourceTree = "<group>"; };
+		1184A9862BD93373000CCB5B /* SettingsScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenAssembly.swift; sourceTree = "<group>"; };
+		1184A9882BD93563000CCB5B /* HistoryScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryScreenRouter.swift; sourceTree = "<group>"; };
+		1184A98A2BD93576000CCB5B /* HistoryScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryScreenAssembly.swift; sourceTree = "<group>"; };
+		1184A9902BD96E8E000CCB5B /* SharedDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedDataService.swift; sourceTree = "<group>"; };
+		1184A9922BD96EAF000CCB5B /* DIContainerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainerImpl.swift; sourceTree = "<group>"; };
+		1184A9952BD96FE7000CCB5B /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +134,8 @@
 		1184A92E2BD92A4A000CCB5B /* SpeedTest */ = {
 			isa = PBXGroup;
 			children = (
-				1184A92F2BD92A4A000CCB5B /* SpeedTestApp.swift */,
-				1184A9312BD92A4A000CCB5B /* ContentView.swift */,
-				1184A9332BD92A4C000CCB5B /* Assets.xcassets */,
-				1184A9382BD92A4C000CCB5B /* Persistence.swift */,
-				1184A93A2BD92A4C000CCB5B /* SpeedTest.xcdatamodeld */,
+				1184A9602BD92AB9000CCB5B /* AppLayer */,
+				1184A95F2BD92AB1000CCB5B /* CoreLayer */,
 				1184A9352BD92A4C000CCB5B /* Preview Content */,
 			);
 			path = SpeedTest;
@@ -131,6 +164,139 @@
 				1184A9512BD92A4C000CCB5B /* SpeedTestUITestsLaunchTests.swift */,
 			);
 			path = SpeedTestUITests;
+			sourceTree = "<group>";
+		};
+		1184A95E2BD92AA7000CCB5B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				1184A92F2BD92A4A000CCB5B /* SpeedTestApp.swift */,
+				1184A9332BD92A4C000CCB5B /* Assets.xcassets */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		1184A95F2BD92AB1000CCB5B /* CoreLayer */ = {
+			isa = PBXGroup;
+			children = (
+				1184A9942BD96FBF000CCB5B /* DI */,
+				1184A9642BD92B37000CCB5B /* Logger */,
+				1184A9612BD92AC5000CCB5B /* CoreData */,
+			);
+			path = CoreLayer;
+			sourceTree = "<group>";
+		};
+		1184A9602BD92AB9000CCB5B /* AppLayer */ = {
+			isa = PBXGroup;
+			children = (
+				1184A95E2BD92AA7000CCB5B /* App */,
+				1184A9672BD92B5B000CCB5B /* CommonStaff */,
+				1184A96C2BD9310D000CCB5B /* Service */,
+				1184A96B2BD93104000CCB5B /* Screens */,
+			);
+			path = AppLayer;
+			sourceTree = "<group>";
+		};
+		1184A9612BD92AC5000CCB5B /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				1184A93A2BD92A4C000CCB5B /* SpeedTest.xcdatamodeld */,
+				1184A9622BD92AD3000CCB5B /* DataController.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		1184A9642BD92B37000CCB5B /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				1184A9652BD92B4E000CCB5B /* LogService.swift */,
+			);
+			path = Logger;
+			sourceTree = "<group>";
+		};
+		1184A9672BD92B5B000CCB5B /* CommonStaff */ = {
+			isa = PBXGroup;
+			children = (
+				1184A98D2BD9366F000CCB5B /* DI_Impl */,
+				1184A9682BD92B63000CCB5B /* Extensions */,
+			);
+			path = CommonStaff;
+			sourceTree = "<group>";
+		};
+		1184A9682BD92B63000CCB5B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1184A9692BD92B6D000CCB5B /* Date+.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1184A96B2BD93104000CCB5B /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				1184A96F2BD93127000CCB5B /* HistoryScreen */,
+				1184A96E2BD93120000CCB5B /* SettingsScreen */,
+				1184A96D2BD9311A000CCB5B /* MainScreen */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		1184A96C2BD9310D000CCB5B /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				1184A97E2BD9328C000CCB5B /* NetworkSpeedService.swift */,
+				1184A9902BD96E8E000CCB5B /* SharedDataService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		1184A96D2BD9311A000CCB5B /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				1184A9702BD9313E000CCB5B /* MainScreenView.swift */,
+				1184A9722BD9314F000CCB5B /* MainScreenViewModel.swift */,
+				1184A9802BD932D4000CCB5B /* MainScreenAssembly.swift */,
+				1184A9822BD932DE000CCB5B /* MainScreenRouter.swift */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		1184A96E2BD93120000CCB5B /* SettingsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				1184A9742BD931B6000CCB5B /* SettingsScreenView.swift */,
+				1184A9762BD931C7000CCB5B /* SettingsScreenViewModel.swift */,
+				1184A9842BD93367000CCB5B /* SettingsScreenRouter.swift */,
+				1184A9862BD93373000CCB5B /* SettingsScreenAssembly.swift */,
+			);
+			path = SettingsScreen;
+			sourceTree = "<group>";
+		};
+		1184A96F2BD93127000CCB5B /* HistoryScreen */ = {
+			isa = PBXGroup;
+			children = (
+				1184A9782BD931D9000CCB5B /* HistoryScreenViewModel.swift */,
+				1184A97A2BD931E3000CCB5B /* HistoryModel.swift */,
+				1184A97C2BD931FC000CCB5B /* HistoryScreenView.swift */,
+				1184A9882BD93563000CCB5B /* HistoryScreenRouter.swift */,
+				1184A98A2BD93576000CCB5B /* HistoryScreenAssembly.swift */,
+			);
+			path = HistoryScreen;
+			sourceTree = "<group>";
+		};
+		1184A98D2BD9366F000CCB5B /* DI_Impl */ = {
+			isa = PBXGroup;
+			children = (
+				1184A9922BD96EAF000CCB5B /* DIContainerImpl.swift */,
+			);
+			path = DI_Impl;
+			sourceTree = "<group>";
+		};
+		1184A9942BD96FBF000CCB5B /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				1184A9952BD96FE7000CCB5B /* DIContainer.swift */,
+			);
+			path = DI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,10 +429,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1184A9392BD92A4C000CCB5B /* Persistence.swift in Sources */,
-				1184A9322BD92A4A000CCB5B /* ContentView.swift in Sources */,
+				1184A9872BD93373000CCB5B /* SettingsScreenAssembly.swift in Sources */,
+				1184A9812BD932D4000CCB5B /* MainScreenAssembly.swift in Sources */,
 				1184A9302BD92A4A000CCB5B /* SpeedTestApp.swift in Sources */,
+				1184A9732BD9314F000CCB5B /* MainScreenViewModel.swift in Sources */,
+				1184A9832BD932DE000CCB5B /* MainScreenRouter.swift in Sources */,
+				1184A9712BD9313E000CCB5B /* MainScreenView.swift in Sources */,
+				1184A9792BD931D9000CCB5B /* HistoryScreenViewModel.swift in Sources */,
+				1184A9932BD96EAF000CCB5B /* DIContainerImpl.swift in Sources */,
+				1184A9632BD92AD3000CCB5B /* DataController.swift in Sources */,
+				1184A9852BD93367000CCB5B /* SettingsScreenRouter.swift in Sources */,
+				1184A97B2BD931E3000CCB5B /* HistoryModel.swift in Sources */,
+				1184A97D2BD931FC000CCB5B /* HistoryScreenView.swift in Sources */,
+				1184A9962BD96FE7000CCB5B /* DIContainer.swift in Sources */,
+				1184A9892BD93563000CCB5B /* HistoryScreenRouter.swift in Sources */,
+				1184A9912BD96E8E000CCB5B /* SharedDataService.swift in Sources */,
+				1184A96A2BD92B6D000CCB5B /* Date+.swift in Sources */,
+				1184A9662BD92B4E000CCB5B /* LogService.swift in Sources */,
+				1184A98B2BD93576000CCB5B /* HistoryScreenAssembly.swift in Sources */,
+				1184A9772BD931C7000CCB5B /* SettingsScreenViewModel.swift in Sources */,
 				1184A93C2BD92A4C000CCB5B /* SpeedTest.xcdatamodeld in Sources */,
+				1184A9752BD931B6000CCB5B /* SettingsScreenView.swift in Sources */,
+				1184A97F2BD9328C000CCB5B /* NetworkSpeedService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,7 +539,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -412,7 +596,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -436,8 +620,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -465,8 +650,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
