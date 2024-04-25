@@ -18,10 +18,15 @@ final class MainScreenAssembly {
     }
     
     func view() -> MainScreenView {
-        let router = MainScreenRouterImpl()
         let networkSpeedService = container.resolve(type: NetworkSpeedServiceProtocol.self)
+        let networkInfoService = container.resolve(type: NetworkInfoServiceProtocol.self)
+        let sharedDataService = container.resolve(type: SharedDataService.self)
+        
+        let router = MainScreenRouterImpl()
         let viewModel = MainScreenViewModel(router: router,
-                                            networkSpeedService: networkSpeedService)
+                                            networkSpeedService: networkSpeedService, 
+                                            networkInfoService: networkInfoService,
+                                            sharedDataService: sharedDataService)
         return MainScreenView(viewModel: viewModel)
     }
 }

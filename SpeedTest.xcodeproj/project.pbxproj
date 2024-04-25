@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1134BB842BDA8DF400A67A8A /* StartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1134BB832BDA8DF400A67A8A /* StartButton.swift */; };
+		1134BB862BDA9B9600A67A8A /* SpeedoMeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1134BB852BDA9B9600A67A8A /* SpeedoMeter.swift */; };
+		1134BB8A2BDA9F8600A67A8A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1134BB892BDA9F8600A67A8A /* Alamofire */; };
+		1134BB8C2BDAACC600A67A8A /* NetworkInfoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1134BB8B2BDAACC600A67A8A /* NetworkInfoService.swift */; };
+		1134BB8F2BDAAD3300A67A8A /* NetworkInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1134BB8E2BDAAD3300A67A8A /* NetworkInfoModel.swift */; };
 		1184A9302BD92A4A000CCB5B /* SpeedTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1184A92F2BD92A4A000CCB5B /* SpeedTestApp.swift */; };
 		1184A9342BD92A4C000CCB5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1184A9332BD92A4C000CCB5B /* Assets.xcassets */; };
 		1184A9372BD92A4C000CCB5B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1184A9362BD92A4C000CCB5B /* Preview Assets.xcassets */; };
@@ -54,6 +59,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1134BB832BDA8DF400A67A8A /* StartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButton.swift; sourceTree = "<group>"; };
+		1134BB852BDA9B9600A67A8A /* SpeedoMeter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedoMeter.swift; sourceTree = "<group>"; };
+		1134BB8B2BDAACC600A67A8A /* NetworkInfoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInfoService.swift; sourceTree = "<group>"; };
+		1134BB8E2BDAAD3300A67A8A /* NetworkInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInfoModel.swift; sourceTree = "<group>"; };
 		1184A92C2BD92A4A000CCB5B /* SpeedTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeedTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1184A92F2BD92A4A000CCB5B /* SpeedTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedTestApp.swift; sourceTree = "<group>"; };
 		1184A9332BD92A4C000CCB5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -91,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1134BB8A2BDA9F8600A67A8A /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +121,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1134BB802BDA8DD100A67A8A /* AuxUI */ = {
+			isa = PBXGroup;
+			children = (
+				1134BB832BDA8DF400A67A8A /* StartButton.swift */,
+				1134BB852BDA9B9600A67A8A /* SpeedoMeter.swift */,
+			);
+			path = AuxUI;
+			sourceTree = "<group>";
+		};
+		1134BB882BDA9F8600A67A8A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1134BB8D2BDAACE700A67A8A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1184A97A2BD931E3000CCB5B /* HistoryModel.swift */,
+				1134BB8E2BDAAD3300A67A8A /* NetworkInfoModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		1184A9232BD92A4A000CCB5B = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +153,7 @@
 				1184A9442BD92A4C000CCB5B /* SpeedTestTests */,
 				1184A94E2BD92A4C000CCB5B /* SpeedTestUITests */,
 				1184A92D2BD92A4A000CCB5B /* Products */,
+				1134BB882BDA9F8600A67A8A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -189,9 +225,10 @@
 			isa = PBXGroup;
 			children = (
 				1184A95E2BD92AA7000CCB5B /* App */,
-				1184A9672BD92B5B000CCB5B /* CommonStaff */,
 				1184A96C2BD9310D000CCB5B /* Service */,
+				1134BB8D2BDAACE700A67A8A /* Models */,
 				1184A96B2BD93104000CCB5B /* Screens */,
+				1184A9672BD92B5B000CCB5B /* CommonStaff */,
 			);
 			path = AppLayer;
 			sourceTree = "<group>";
@@ -245,6 +282,7 @@
 			children = (
 				1184A97E2BD9328C000CCB5B /* NetworkSpeedService.swift */,
 				1184A9902BD96E8E000CCB5B /* SharedDataService.swift */,
+				1134BB8B2BDAACC600A67A8A /* NetworkInfoService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -252,6 +290,7 @@
 		1184A96D2BD9311A000CCB5B /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
+				1134BB802BDA8DD100A67A8A /* AuxUI */,
 				1184A9702BD9313E000CCB5B /* MainScreenView.swift */,
 				1184A9722BD9314F000CCB5B /* MainScreenViewModel.swift */,
 				1184A9802BD932D4000CCB5B /* MainScreenAssembly.swift */,
@@ -275,7 +314,6 @@
 			isa = PBXGroup;
 			children = (
 				1184A9782BD931D9000CCB5B /* HistoryScreenViewModel.swift */,
-				1184A97A2BD931E3000CCB5B /* HistoryModel.swift */,
 				1184A97C2BD931FC000CCB5B /* HistoryScreenView.swift */,
 				1184A9882BD93563000CCB5B /* HistoryScreenRouter.swift */,
 				1184A98A2BD93576000CCB5B /* HistoryScreenAssembly.swift */,
@@ -315,6 +353,9 @@
 			dependencies = (
 			);
 			name = SpeedTest;
+			packageProductDependencies = (
+				1134BB892BDA9F8600A67A8A /* Alamofire */,
+			);
 			productName = SpeedTest;
 			productReference = 1184A92C2BD92A4A000CCB5B /* SpeedTest.app */;
 			productType = "com.apple.product-type.application";
@@ -387,6 +428,9 @@
 				Base,
 			);
 			mainGroup = 1184A9232BD92A4A000CCB5B;
+			packageReferences = (
+				1134BB872BDA9E8200A67A8A /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 1184A92D2BD92A4A000CCB5B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -429,6 +473,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1134BB842BDA8DF400A67A8A /* StartButton.swift in Sources */,
 				1184A9872BD93373000CCB5B /* SettingsScreenAssembly.swift in Sources */,
 				1184A9812BD932D4000CCB5B /* MainScreenAssembly.swift in Sources */,
 				1184A9302BD92A4A000CCB5B /* SpeedTestApp.swift in Sources */,
@@ -436,8 +481,11 @@
 				1184A9832BD932DE000CCB5B /* MainScreenRouter.swift in Sources */,
 				1184A9712BD9313E000CCB5B /* MainScreenView.swift in Sources */,
 				1184A9792BD931D9000CCB5B /* HistoryScreenViewModel.swift in Sources */,
+				1134BB8C2BDAACC600A67A8A /* NetworkInfoService.swift in Sources */,
 				1184A9932BD96EAF000CCB5B /* DIContainerImpl.swift in Sources */,
+				1134BB862BDA9B9600A67A8A /* SpeedoMeter.swift in Sources */,
 				1184A9632BD92AD3000CCB5B /* DataController.swift in Sources */,
+				1134BB8F2BDAAD3300A67A8A /* NetworkInfoModel.swift in Sources */,
 				1184A9852BD93367000CCB5B /* SettingsScreenRouter.swift in Sources */,
 				1184A97B2BD931E3000CCB5B /* HistoryModel.swift in Sources */,
 				1184A97D2BD931FC000CCB5B /* HistoryScreenView.swift in Sources */,
@@ -782,6 +830,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1134BB872BDA9E8200A67A8A /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1134BB892BDA9F8600A67A8A /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1134BB872BDA9E8200A67A8A /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		1184A93A2BD92A4C000CCB5B /* SpeedTest.xcdatamodeld */ = {

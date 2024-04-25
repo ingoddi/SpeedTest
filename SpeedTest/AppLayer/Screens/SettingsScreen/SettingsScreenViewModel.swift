@@ -5,16 +5,21 @@
 //  Created by Иван Карплюк on 24.04.2024.
 //
 
-import Foundation
+import SwiftUI
 
 @MainActor
 final class SettingsScreenViewModel: ObservableObject {
-    
-    var sharedDataService = SharedDataService.share
-    
     private let router: SettingsScreenRouter
     
-    init(router: SettingsScreenRouter) {
+    @ObservedObject var sharedDataService: SharedDataService
+        
+    init(router: SettingsScreenRouter,
+         sharedDataService: SharedDataService) {
         self.router = router
+        self.sharedDataService = sharedDataService
+    }
+    
+    func updateURL(newURL: String) {
+        sharedDataService.downloadURL = newURL
     }
 }
