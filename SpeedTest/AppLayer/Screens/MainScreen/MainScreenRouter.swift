@@ -23,6 +23,6 @@ extension MainScreenRouterImpl: MainScreenRouter {
     }
     
     func historyScreenView() -> HistoryScreenView {
-        return HistoryScreenAssembly().view()
+        return HistoryScreenAssembly(container: DIContainer.shared).view()
     }
 }

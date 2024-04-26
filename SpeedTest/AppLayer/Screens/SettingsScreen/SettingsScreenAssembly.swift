@@ -15,6 +15,7 @@ final class SettingsScreenAssembly {
     init(container: DIContainer) {
         self.container = container
     }
+    
     func view() -> SettingsScreenView {
         let sharedDataService = container.resolve(type: SharedDataService.self)
         

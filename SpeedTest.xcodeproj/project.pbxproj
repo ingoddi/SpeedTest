@@ -12,6 +12,10 @@
 		1134BB8A2BDA9F8600A67A8A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1134BB892BDA9F8600A67A8A /* Alamofire */; };
 		1134BB8C2BDAACC600A67A8A /* NetworkInfoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1134BB8B2BDAACC600A67A8A /* NetworkInfoService.swift */; };
 		1134BB8F2BDAAD3300A67A8A /* NetworkInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1134BB8E2BDAAD3300A67A8A /* NetworkInfoModel.swift */; };
+		1134BB932BDB158C00A67A8A /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1134BB922BDB158C00A67A8A /* CoreDataService.swift */; };
+		1134BBA42BDB17FC00A67A8A /* HistoryEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1134BBA02BDB17FC00A67A8A /* HistoryEntity+CoreDataClass.swift */; };
+		1134BBA62BDB17FC00A67A8A /* SettingEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1134BBA22BDB17FC00A67A8A /* SettingEntity+CoreDataClass.swift */; };
+		1134BBA92BDB1B2A00A67A8A /* PersistanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1134BBA82BDB1B2A00A67A8A /* PersistanceController.swift */; };
 		1184A9302BD92A4A000CCB5B /* SpeedTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1184A92F2BD92A4A000CCB5B /* SpeedTestApp.swift */; };
 		1184A9342BD92A4C000CCB5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1184A9332BD92A4C000CCB5B /* Assets.xcassets */; };
 		1184A9372BD92A4C000CCB5B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1184A9362BD92A4C000CCB5B /* Preview Assets.xcassets */; };
@@ -19,7 +23,6 @@
 		1184A9462BD92A4C000CCB5B /* SpeedTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1184A9452BD92A4C000CCB5B /* SpeedTestTests.swift */; };
 		1184A9502BD92A4C000CCB5B /* SpeedTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1184A94F2BD92A4C000CCB5B /* SpeedTestUITests.swift */; };
 		1184A9522BD92A4C000CCB5B /* SpeedTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1184A9512BD92A4C000CCB5B /* SpeedTestUITestsLaunchTests.swift */; };
-		1184A9632BD92AD3000CCB5B /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1184A9622BD92AD3000CCB5B /* DataController.swift */; };
 		1184A9662BD92B4E000CCB5B /* LogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1184A9652BD92B4E000CCB5B /* LogService.swift */; };
 		1184A96A2BD92B6D000CCB5B /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1184A9692BD92B6D000CCB5B /* Date+.swift */; };
 		1184A9712BD9313E000CCB5B /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1184A9702BD9313E000CCB5B /* MainScreenView.swift */; };
@@ -27,7 +30,6 @@
 		1184A9752BD931B6000CCB5B /* SettingsScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1184A9742BD931B6000CCB5B /* SettingsScreenView.swift */; };
 		1184A9772BD931C7000CCB5B /* SettingsScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1184A9762BD931C7000CCB5B /* SettingsScreenViewModel.swift */; };
 		1184A9792BD931D9000CCB5B /* HistoryScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1184A9782BD931D9000CCB5B /* HistoryScreenViewModel.swift */; };
-		1184A97B2BD931E3000CCB5B /* HistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1184A97A2BD931E3000CCB5B /* HistoryModel.swift */; };
 		1184A97D2BD931FC000CCB5B /* HistoryScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1184A97C2BD931FC000CCB5B /* HistoryScreenView.swift */; };
 		1184A97F2BD9328C000CCB5B /* NetworkSpeedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1184A97E2BD9328C000CCB5B /* NetworkSpeedService.swift */; };
 		1184A9812BD932D4000CCB5B /* MainScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1184A9802BD932D4000CCB5B /* MainScreenAssembly.swift */; };
@@ -63,6 +65,10 @@
 		1134BB852BDA9B9600A67A8A /* SpeedoMeter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedoMeter.swift; sourceTree = "<group>"; };
 		1134BB8B2BDAACC600A67A8A /* NetworkInfoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInfoService.swift; sourceTree = "<group>"; };
 		1134BB8E2BDAAD3300A67A8A /* NetworkInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInfoModel.swift; sourceTree = "<group>"; };
+		1134BB922BDB158C00A67A8A /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
+		1134BBA02BDB17FC00A67A8A /* HistoryEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HistoryEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		1134BBA22BDB17FC00A67A8A /* SettingEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		1134BBA82BDB1B2A00A67A8A /* PersistanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceController.swift; sourceTree = "<group>"; };
 		1184A92C2BD92A4A000CCB5B /* SpeedTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeedTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1184A92F2BD92A4A000CCB5B /* SpeedTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedTestApp.swift; sourceTree = "<group>"; };
 		1184A9332BD92A4C000CCB5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -73,7 +79,6 @@
 		1184A94B2BD92A4C000CCB5B /* SpeedTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpeedTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1184A94F2BD92A4C000CCB5B /* SpeedTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedTestUITests.swift; sourceTree = "<group>"; };
 		1184A9512BD92A4C000CCB5B /* SpeedTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		1184A9622BD92AD3000CCB5B /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		1184A9652BD92B4E000CCB5B /* LogService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogService.swift; sourceTree = "<group>"; };
 		1184A9692BD92B6D000CCB5B /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
 		1184A9702BD9313E000CCB5B /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
@@ -81,7 +86,6 @@
 		1184A9742BD931B6000CCB5B /* SettingsScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenView.swift; sourceTree = "<group>"; };
 		1184A9762BD931C7000CCB5B /* SettingsScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenViewModel.swift; sourceTree = "<group>"; };
 		1184A9782BD931D9000CCB5B /* HistoryScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryScreenViewModel.swift; sourceTree = "<group>"; };
-		1184A97A2BD931E3000CCB5B /* HistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryModel.swift; sourceTree = "<group>"; };
 		1184A97C2BD931FC000CCB5B /* HistoryScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryScreenView.swift; sourceTree = "<group>"; };
 		1184A97E2BD9328C000CCB5B /* NetworkSpeedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSpeedService.swift; sourceTree = "<group>"; };
 		1184A9802BD932D4000CCB5B /* MainScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenAssembly.swift; sourceTree = "<group>"; };
@@ -140,10 +144,20 @@
 		1134BB8D2BDAACE700A67A8A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				1184A97A2BD931E3000CCB5B /* HistoryModel.swift */,
+				1134BBA02BDB17FC00A67A8A /* HistoryEntity+CoreDataClass.swift */,
+				1134BBA22BDB17FC00A67A8A /* SettingEntity+CoreDataClass.swift */,
 				1134BB8E2BDAAD3300A67A8A /* NetworkInfoModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		1134BBAA2BDB1C9900A67A8A /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				1134BB922BDB158C00A67A8A /* CoreDataService.swift */,
+				1134BBA82BDB1B2A00A67A8A /* PersistanceController.swift */,
+			);
+			name = CoreData;
 			sourceTree = "<group>";
 		};
 		1184A9232BD92A4A000CCB5B = {
@@ -237,7 +251,6 @@
 			isa = PBXGroup;
 			children = (
 				1184A93A2BD92A4C000CCB5B /* SpeedTest.xcdatamodeld */,
-				1184A9622BD92AD3000CCB5B /* DataController.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -280,6 +293,7 @@
 		1184A96C2BD9310D000CCB5B /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				1134BBAA2BDB1C9900A67A8A /* CoreData */,
 				1184A97E2BD9328C000CCB5B /* NetworkSpeedService.swift */,
 				1184A9902BD96E8E000CCB5B /* SharedDataService.swift */,
 				1134BB8B2BDAACC600A67A8A /* NetworkInfoService.swift */,
@@ -473,10 +487,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1134BBA42BDB17FC00A67A8A /* HistoryEntity+CoreDataClass.swift in Sources */,
+				1134BBA62BDB17FC00A67A8A /* SettingEntity+CoreDataClass.swift in Sources */,
 				1134BB842BDA8DF400A67A8A /* StartButton.swift in Sources */,
 				1184A9872BD93373000CCB5B /* SettingsScreenAssembly.swift in Sources */,
 				1184A9812BD932D4000CCB5B /* MainScreenAssembly.swift in Sources */,
 				1184A9302BD92A4A000CCB5B /* SpeedTestApp.swift in Sources */,
+				1134BB932BDB158C00A67A8A /* CoreDataService.swift in Sources */,
 				1184A9732BD9314F000CCB5B /* MainScreenViewModel.swift in Sources */,
 				1184A9832BD932DE000CCB5B /* MainScreenRouter.swift in Sources */,
 				1184A9712BD9313E000CCB5B /* MainScreenView.swift in Sources */,
@@ -484,10 +501,8 @@
 				1134BB8C2BDAACC600A67A8A /* NetworkInfoService.swift in Sources */,
 				1184A9932BD96EAF000CCB5B /* DIContainerImpl.swift in Sources */,
 				1134BB862BDA9B9600A67A8A /* SpeedoMeter.swift in Sources */,
-				1184A9632BD92AD3000CCB5B /* DataController.swift in Sources */,
 				1134BB8F2BDAAD3300A67A8A /* NetworkInfoModel.swift in Sources */,
 				1184A9852BD93367000CCB5B /* SettingsScreenRouter.swift in Sources */,
-				1184A97B2BD931E3000CCB5B /* HistoryModel.swift in Sources */,
 				1184A97D2BD931FC000CCB5B /* HistoryScreenView.swift in Sources */,
 				1184A9962BD96FE7000CCB5B /* DIContainer.swift in Sources */,
 				1184A9892BD93563000CCB5B /* HistoryScreenRouter.swift in Sources */,
@@ -499,6 +514,7 @@
 				1184A93C2BD92A4C000CCB5B /* SpeedTest.xcdatamodeld in Sources */,
 				1184A9752BD931B6000CCB5B /* SettingsScreenView.swift in Sources */,
 				1184A97F2BD9328C000CCB5B /* NetworkSpeedService.swift in Sources */,
+				1134BBA92BDB1B2A00A67A8A /* PersistanceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

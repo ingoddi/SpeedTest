@@ -59,7 +59,7 @@ final class NetworkSpeedService: NetworkSpeedServiceProtocol {
             let elapsedInterval = currentTime.timeIntervalSince(self.previousTime!)
             if elapsedInterval > 0.6 || progress.isFinished {
                 speedCompletion(speed)
-                print("Download speed: \(speed) MB/s")
+                print("⬇️ - Download speed: \(speed) MB/s")
                 self.previousTime = currentTime
                 self.previousCompletedCount = progress.completedUnitCount
             }
@@ -102,7 +102,7 @@ final class NetworkSpeedService: NetworkSpeedServiceProtocol {
             let elapsedInterval = currentTime.timeIntervalSince(self.uploadPreviousTime!)
             if elapsedInterval > 0.6 || progress.isFinished {
                 speedCompletion(speed)
-                print("Upload speed: \(speed) MB/s")
+                print("⬆️ - Upload speed: \(speed) MB/s")
                 self.uploadPreviousTime = currentTime
                 self.uploadPreviousCompletedCount = progress.completedUnitCount
             }

@@ -37,11 +37,5 @@ struct SpeedoMeter: View {
         let temp = self.progress / 2
         return CGFloat(temp)
     }
-    
-//    func setArrow()->Double{
-//        
-//        let temp = self.progress / 100
-//        return Double(temp * 180)
-//    }
 }
 
