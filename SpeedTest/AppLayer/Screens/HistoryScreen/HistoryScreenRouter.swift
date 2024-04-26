@@ -9,13 +9,8 @@ import Foundation
 
 
 @MainActor
-protocol HistoryScreenRouter {
-    
-}
+protocol HistoryScreenRouter {}
 
 @MainActor
 final class HistoryScreenRouterImpl: ObservableObject { }
-
-extension HistoryScreenRouterImpl: HistoryScreenRouter {
-    
-}
+extension HistoryScreenRouterImpl: HistoryScreenRouter {}

@@ -19,10 +19,10 @@ final class MainScreenRouterImpl: ObservableObject {}
 
 extension MainScreenRouterImpl: MainScreenRouter {
     func settingsScreenView() -> SettingsScreenView {
-        return SettingsScreenAssembly().view()
+        return SettingsScreenAssembly(container: DIContainer.shared).view()
     }
     
     func historyScreenView() -> HistoryScreenView {
-        return HistoryScreenAssembly().view()
+        return HistoryScreenAssembly(container: DIContainer.shared).view()
     }
 }

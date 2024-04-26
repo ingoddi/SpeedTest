@@ -14,7 +14,27 @@ struct HistoryScreenView: View {
         self.viewModel = viewModel
     }
     
+    //MARK: - Body
     var body: some View {
-        Text("History")
+        NavigationView {
+            List(viewModel.historyEntities, id: \.self) { entity in
+                HStack {
+                    VStack {
+                        Text("\(entity.ip ?? "")")
+                            .font(.headline)
+                        Text("\(entity.date?.formattedDateString() ?? "")")
+                            .font(.footnote)
+                    }
+                    VStack {
+                        Text("Download: \(String(format: "%.1f", entity.averageDownloadSpeed))")
+                        Text("Upload: \(String(format: "%.1f", entity.averageUploadSpeed))")
+                    }
+                }
+            }
+            .navigationTitle("History")
+            .onAppear {
+                viewModel.fetchHistoryEntities()
+            }
+        }
     }
 }
