@@ -9,15 +9,19 @@ import SwiftUI
 
 struct SettingsScreenView: View {
     @ObservedObject private var viewModel: SettingsScreenViewModel
-
+    
     @State private var downloadURL: String = ""
     @State private var uploadURL: String = ""
     @State private var uploadAPIToken: String = ""
-
+    
+    @State private var isAlertShown: Bool = false
+    @State private var alertMessage: String = ""
+    
+    
     init(viewModel: SettingsScreenViewModel) {
         self.viewModel = viewModel
     }
-
+    
     //MARK: - Body
     var body: some View {
         NavigationView {
@@ -31,6 +35,17 @@ struct SettingsScreenView: View {
                 defaultDataButton
             }
             .navigationTitle("Settings")
+            .alert(isPresented: $isAlertShown) {
+                Alert(
+                    title: Text("Success"),
+                    message: Text(alertMessage),
+                    dismissButton: .default(Text("OK")) {
+                        downloadURL = ""
+                        uploadURL = ""
+                        uploadAPIToken = ""
+                    }
+                )
+            }
         }
     }
     
@@ -58,7 +73,8 @@ struct SettingsScreenView: View {
                 )
             Button("Save", action: {
                 viewModel.updateDownloadURL(newURL: downloadURL)
-                downloadURL = ""
+                alertMessage = "Download URL has been saved successfully."
+                isAlertShown = true
             })
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 35)
             .background(Color.orange)
@@ -91,8 +107,8 @@ struct SettingsScreenView: View {
                 )
             Button("Save", action: {
                 viewModel.updateUploadURLwithToken(newURL: uploadURL, token: uploadAPIToken)
-                uploadURL = ""
-                uploadAPIToken = ""
+                alertMessage = "Upload URL and API token have been saved successfully."
+                isAlertShown = true
             })
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 35)
             .background(Color.orange)
@@ -105,6 +121,8 @@ struct SettingsScreenView: View {
     private var defaultDataButton: some View {
         Button("Default value", action: {
             viewModel.setDefaultValue()
+            alertMessage = "Default values have been restored successfully."
+            isAlertShown = true
         })
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 35)
         .background(Color.red)

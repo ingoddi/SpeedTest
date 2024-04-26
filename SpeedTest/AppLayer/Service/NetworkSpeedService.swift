@@ -18,6 +18,9 @@ protocol NetworkSpeedServiceProtocol {
                     speedCompletion: @escaping (_ speed: Float) -> Void,
                     progressCompletion: @escaping (_ percent: Float) -> Void,
                     completion: @escaping (_ error: Error?) -> Void)
+    
+    func cancelCurrentDownload()
+    func cancelCurrentUpload()
 }
 
 final class NetworkSpeedService: NetworkSpeedServiceProtocol {
@@ -30,23 +33,26 @@ final class NetworkSpeedService: NetworkSpeedServiceProtocol {
     private var uploadPreviousTime: Date?
     private var uploadPreviousCompletedCount: Int64 = 0
     
+    private var currentDownloadRequest: DownloadRequest?
+    private var currentUploadRequest: UploadRequest?
+    
     func downloadFile(
         withURL url: String,
         to destinationURL: URL,
         speedCompletion: @escaping (_ speed: Float) -> Void,
         progressCompletion: @escaping (_ percent: Float) -> Void,
         completion: @escaping (_ error: Error?
-    ) -> Void) {
+        ) -> Void) {
         
         self.startTime = Date()
         self.previousTime = Date()
         
-        let request = AF.download(url, to: { _, _ -> (destinationURL: URL,
-                                                    options: DownloadRequest.Options) in
+        currentDownloadRequest = AF.download(url, to: { _, _ -> (destinationURL: URL,
+                                                                 options: DownloadRequest.Options) in
             (destinationURL: destinationURL, options: [.removePreviousFile, .createIntermediateDirectories])
         })
         
-        request.downloadProgress { progress in
+        currentDownloadRequest?.downloadProgress { progress in
             let percent = Float(progress.fractionCompleted)
             progressCompletion(percent)
             
@@ -65,7 +71,7 @@ final class NetworkSpeedService: NetworkSpeedServiceProtocol {
             }
         }
         
-        request.response { response in
+        currentDownloadRequest?.response { response in
             if response.error == nil {
                 completion(nil)
             } else {
@@ -73,7 +79,7 @@ final class NetworkSpeedService: NetworkSpeedServiceProtocol {
             }
         }
     }
-
+    
     func uploadData(
         data: Data,
         toUrl urlString: String,
@@ -81,38 +87,49 @@ final class NetworkSpeedService: NetworkSpeedServiceProtocol {
         speedCompletion: @escaping (_ speed: Float) -> Void,
         progressCompletion: @escaping (_ percent: Float) -> Void,
         completion: @escaping (_ error: Error?) -> Void) {
-        
-        self.uploadStartTime = Date()
-        self.uploadPreviousTime = Date()
-        
-        let headers: HTTPHeaders = ["X-File-IO-API-Key": apiKey]
-        
-        AF.upload(multipartFormData: { multipartFormData in
-            multipartFormData.append(data, withName: "file", fileName: "testFile", mimeType: "application/octet-stream")
-        }, to: urlString, headers: headers).uploadProgress { progress in
-            let percent = Float(progress.fractionCompleted)
-            progressCompletion(percent)
             
-            let currentTime = Date()
-            let elapsedTime = currentTime.timeIntervalSince(self.uploadStartTime!)
+            self.uploadStartTime = Date()
+            self.uploadPreviousTime = Date()
             
-            let bytesPerSecond = Float(progress.completedUnitCount) / Float(elapsedTime)
-            let speed = bytesPerSecond / (1024 * 1024)
+            let headers: HTTPHeaders = ["X-File-IO-API-Key": apiKey]
             
-            let elapsedInterval = currentTime.timeIntervalSince(self.uploadPreviousTime!)
-            if elapsedInterval > 0.6 || progress.isFinished {
-                speedCompletion(speed)
-                print("⬆️ - Upload speed: \(speed) MB/s")
-                self.uploadPreviousTime = currentTime
-                self.uploadPreviousCompletedCount = progress.completedUnitCount
+            currentUploadRequest = AF.upload(multipartFormData: { multipartFormData in
+                multipartFormData.append(data, withName: "file", fileName: "testFile", mimeType: "application/octet-stream")
+            }, to: urlString, headers: headers)
+            
+            currentUploadRequest?.uploadProgress { progress in
+                let percent = Float(progress.fractionCompleted)
+                progressCompletion(percent)
+                
+                let currentTime = Date()
+                let elapsedTime = currentTime.timeIntervalSince(self.uploadStartTime!)
+                
+                let bytesPerSecond = Float(progress.completedUnitCount) / Float(elapsedTime)
+                let speed = bytesPerSecond / (1024 * 1024)
+                
+                let elapsedInterval = currentTime.timeIntervalSince(self.uploadPreviousTime!)
+                if elapsedInterval > 0.6 || progress.isFinished {
+                    speedCompletion(speed)
+                    print("⬆️ - Upload speed: \(speed) MB/s")
+                    self.uploadPreviousTime = currentTime
+                    self.uploadPreviousCompletedCount = progress.completedUnitCount
+                }
             }
-        }.response { response in
-            if let error = response.error {
-                completion(error)
-            } else {
-                completion(nil)
+            currentUploadRequest?.response { response in
+                if let error = response.error {
+                    completion(error)
+                } else {
+                    completion(nil)
+                }
             }
         }
+    
+    func cancelCurrentDownload() {
+        currentDownloadRequest?.cancel()
+    }
+    
+    func cancelCurrentUpload() {
+        currentUploadRequest?.cancel()
     }
 }
 

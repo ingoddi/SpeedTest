@@ -25,6 +25,9 @@ struct MainScreenView: View {
                     .padding()
                 Spacer()
                 speedometr
+                    .onDisappear {
+                        viewModel.stopSpeedTest()
+                    }
                 Spacer()
                 speedStat
                     .padding()
@@ -85,9 +88,6 @@ struct MainScreenView: View {
                                 width: 150,
                                 heght: 150)
                         .transition(.scale)
-                        .onAppear {
-                            viewModel.fetchNetworkInfo()
-                        }
                 }
             } else {
                 withAnimation {
