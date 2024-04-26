@@ -27,6 +27,8 @@ final class MainScreenViewModel: ObservableObject {
         self.networkInfoService = networkInfoService
         self.sharedDataService = sharedDataService
         self.coreDataService = coreDataService
+        
+        fetchNetworkInfo()
     }
     
     //MARK: - Stored Property
@@ -38,8 +40,6 @@ final class MainScreenViewModel: ObservableObject {
     
     //MARK: - Published Property
     //Bool
-    @Published var shouldDownload: Bool = true
-    @Published var shouldUpload: Bool = true
     @Published var isMeasuring: Bool = false
     
     //Float
@@ -58,6 +58,11 @@ final class MainScreenViewModel: ObservableObject {
     
     //Other
     @Published var typeOperationImageColor: Color = .white
+    
+    func stopSpeedTest() {
+        networkSpeedService.cancelCurrentUpload()
+        networkSpeedService.cancelCurrentDownload()
+    }
     
     /// Запускает тест скорости сети.
     ///
@@ -137,7 +142,7 @@ final class MainScreenViewModel: ObservableObject {
                 }
                 
                 // Если выгрузка не требуется, завершаем измерение
-                if !self.shouldUpload {
+                if !self.sharedDataService.uploadIsOn {
                     self.isMeasuring.toggle()
                     self.downloadProgress = 0.0
                     
@@ -155,7 +160,7 @@ final class MainScreenViewModel: ObservableObject {
                 }
                 
                 // Если выгрузка требуется, запускаем функцию выгрузки
-                if self.shouldUpload {
+                if self.sharedDataService.uploadIsOn {
                     self.uploadFile()
                 }
                 
